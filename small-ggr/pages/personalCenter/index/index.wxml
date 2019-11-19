@@ -1,0 +1,10 @@
+<!--pages/personalCenter/index/index.wxml-->
+<view >
+    <text >头像的位置</text>
+</view>
+<view >
+    <text > 图标的位置</text>
+</view>
+<navigator >
+    <view >为的备忘录</view>
+</navigator>

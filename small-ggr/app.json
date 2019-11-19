@@ -1,13 +1,32 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/personalCenter/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#969696",
+    "selectedColor": "#088EFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./assets/img/ico_home_one_nomal@2x.png",
+        "selectedIconPath": "./assets/img/ico_home_one_press@2x.png"
+      },
+      {
+        "pagePath": "pages/personalCenter/index/index",
+        "text": "我的",
+        "iconPath": "./assets/img/ico_home_mine_nomal@2x.png",
+        "selectedIconPath": "./assets/img/ico_home_mine_press@2x.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
