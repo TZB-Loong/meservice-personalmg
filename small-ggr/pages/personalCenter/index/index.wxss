@@ -1,1 +1,23 @@
 /* pages/personalCenter/index/index.wxss */
+.header {
+    padding: 50rpx 40rpx 0 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .avatar {
+    vertical-align: middle;
+    width: 120rpx;
+    height: 115rpx;
+    border-radius: 50%;
+  }
+  .name {
+    font-family: PingFangSC-Medium;
+    font-size: 40rpx;
+    color: #222a37;
+    padding-left: 30rpx;
+    font-weight: 700;
+  }
+  .content{
+    margin-top: 15rpx;
+  }
