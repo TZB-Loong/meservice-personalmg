@@ -1,4 +1,21 @@
-<!--index.wxml-->
-<view>
-  <text>分模块来进行显示的</text>
+<!--index.wxml--> 
+<view class="header">
+      <view class="title">个人馆</view>
+      <view class="text">有了这一步，才有下一步！</view>
+</view>
+<view class="card" >
+  <view class="cardIcon">
+      <van-grid column-num="3" border="{{false}}">
+          <van-grid-item icon="photo-o" text="常用账号" />
+          <van-grid-item icon="photo-o" text="证件" />
+          <van-grid-item icon="photo-o" text="更多"/>
+      </van-grid>
+  </view>
+</view>
+<view class="content">
+    <text>我的账号</text>
+    <van-grid column-num="2" border="{{false}}">
+        <van-grid-item icon="photo-o" text="文字" />
+        <van-grid-item icon="photo-o" text="文字" />
+    </van-grid>
 </view>

@@ -1,1 +1,47 @@
 /**index.wxss**/
+.header{
+  width: 100%;
+  height: 240rpx;
+  text-align: center;
+  overflow: hidden;
+  background-color: #088EFF;
+  color: #ffffff;
+}
+.title{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 42rpx;
+  font-weight: 700;
+  transform:translateX(-50%)
+}
+.text{
+  font-size: 28rpx;
+  color: #e0f1ff;
+  position: absolute;
+  top: 60rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card{
+  text-align: center;
+  /* line-height: 200rpx; */
+  height: 200rpx;
+  width: 730rpx;
+  position: absolute;
+  top: 122rpx;
+  left: 50%;
+  background-color: #ffffff;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  box-shadow:0 0 8px 0 rgba(229,229,229,0.60);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardIcon{
+  width: 95%;
+}
+.content{
+  margin-top: 104rpx;
+}
