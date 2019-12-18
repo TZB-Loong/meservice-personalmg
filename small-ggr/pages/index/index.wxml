@@ -1,21 +1,102 @@
-<!--index.wxml--> 
-<view class="header">
-      <view class="title">个人馆</view>
-      <view class="text">有了这一步，才有下一步！</view>
-</view>
-<view class="card" >
-  <view class="cardIcon">
-      <van-grid column-num="3" border="{{false}}">
-          <van-grid-item icon="photo-o" text="常用账号" />
-          <van-grid-item icon="photo-o" text="证件" />
-          <van-grid-item icon="photo-o" text="更多"/>
-      </van-grid>
-  </view>
-</view>
-<view class="content">
-    <text>我的账号</text>
-    <van-grid column-num="2" border="{{false}}">
-        <van-grid-item icon="photo-o" text="文字" />
-        <van-grid-item icon="photo-o" text="文字" />
-    </van-grid>
+<!--index.wxml-->
+<view style="background-color:#FAFAFA">
+    <view class="header">
+        <view class="title">个人馆</view>
+        <view class="text">有了这一步，才有下一步！</view>
+    </view>
+    <view class="card">
+        <view class="cardIcon">
+            <van-grid column-num="3" border="{{false}}" clickable>
+                <van-grid-item use-slot  link-type="navigateTo" url="/accountPages/pages/index/index">
+                    <i class="icon iconfont icon-xiaochengxu_tubiao2"></i>
+                    <text class="icon_text">常用账号</text>
+                </van-grid-item>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-xiaochengxu_tubiao"></i>
+                    <text class="icon_text">证件</text>
+                </van-grid-item>
+                <van-grid-item use-slot link-type="navigateTo" url="pages/">
+                    <i class="icon iconfont icon-gengduo"></i>
+                    <text class="icon_text">更多</text>
+                </van-grid-item>
+            </van-grid>
+        </view>
+    </view>
+    <view class="content_box">
+        <view class="content">
+            <view class="content_title">
+                <text>我的账号</text>
+            </view>
+            <van-grid column-num="2" clickable>
+                <van-grid-item use-slot url="/accountPages/pages/addAccount/index">
+                    <i class="icon iconfont icon-xiaochengxu-tianjia"></i>
+                    <text class="icon_text">添加</text>
+                </van-grid-item>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-Null-data"></i>
+                    <text class="icon_text">暂无相关数据</text>
+                </van-grid-item>
+            </van-grid>
+        </view>
+        <view class="content">
+            <view class="content_title">
+                <text>证件</text>
+            </view>
+            <van-grid column-num="2" clickable>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-xiaochengxu-tianjia"></i>
+                    <text class="icon_text">添加</text>
+                </van-grid-item>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-Null-data"></i>
+                    <text class="icon_text">暂无相关数据</text>
+                </van-grid-item>
+            </van-grid>
+        </view>
+        <view class="content">
+            <view class="content_title">
+                <text>日志</text>
+            </view>
+            <van-grid column-num="2" clickable>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-xiaochengxu-tianjia"></i>
+                    <text class="icon_text">添加</text>
+                </van-grid-item>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-Null-data"></i>
+                    <text class="icon_text">暂无相关数据</text>
+                </van-grid-item>
+            </van-grid>
+        </view>
+        <view class="content">
+            <view class="content_title">
+                <text>相册</text>
+            </view>
+            <van-grid column-num="2" clickable>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-xiaochengxu-tianjia"></i>
+                    <text class="icon_text">添加</text>
+                </van-grid-item>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-Null-data"></i>
+                    <text class="icon_text">暂无相关数据</text>
+                </van-grid-item>
+            </van-grid>
+        </view>
+        <view class="content">
+            <view class="content_title">
+                <text>杂记</text>
+            </view>
+            <van-grid column-num="2" clickable>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-xiaochengxu-tianjia"></i>
+                    <text class="icon_text">添加</text>
+                </van-grid-item>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-Null-data"></i>
+                    <text class="icon_text">暂无相关数据</text>
+                </van-grid-item>
+            </van-grid>
+        </view>
+    </view>
 </view>

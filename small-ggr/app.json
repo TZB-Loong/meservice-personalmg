@@ -4,6 +4,15 @@
     "pages/logs/logs",
     "pages/personalCenter/index/index"
   ],
+  "subPackages": [
+    {
+      "root": "accountPages",
+      "pages": [
+        "pages/index/index",
+        "pages/addAccount/index"
+      ]
+    }
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

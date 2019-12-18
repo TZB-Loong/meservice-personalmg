@@ -9,7 +9,7 @@ Page({
    */
   data: {
     motto: 'Hello World',
-    userInfo: {nickName:'10岁小老头'},
+    userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
@@ -18,7 +18,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-    console.log(app,'app')
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -45,7 +44,6 @@ Page({
         }
       })
     }
-    console.log(this.data.userInfo)
   },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
