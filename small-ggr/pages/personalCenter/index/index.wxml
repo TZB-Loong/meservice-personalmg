@@ -7,9 +7,10 @@
 <view class="content">
     <van-cell-group border="{{false}}">
         <van-cell is-link title="常用账号" link-type="navigateTo" url="/accountPages/pages/index/index" size="large" />
+        <van-cell is-link title="计划安排" link-type="navigateTo" url="/pages/index/index" size="large" />
         <van-cell is-link title="证件" link-type="navigateTo" url="/pages/index/index" size="large" />
-        <van-cell is-link title="杂记" link-type="navigateTo" url="/pages/index/index" size="large" />
-        <van-cell is-link title="日志" link-type="navigateTo" url="/pages/index/index" size="large" />
         <van-cell is-link title="相册" link-type="navigateTo" url="/pages/index/index" size="large" />
+        <van-cell is-link title="日志" link-type="navigateTo" url="/pages/index/index" size="large" />
+        <van-cell is-link title="杂记" link-type="navigateTo" url="/pages/index/index" size="large" />
     </van-cell-group>
 </view>

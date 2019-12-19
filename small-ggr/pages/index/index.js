@@ -7,50 +7,45 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    isSupport: false,
+    canAuthentication:wx.canIUse('checkIsSupportSoterAuthentication')
   },
   onLoad: function () {
+    wx.showLoading({ mask: true });
+    //设备支持指纹识别时
+    if (this.data.canAuthentication) {
+      wx.checkIsSupportSoterAuthentication({success:res=> this.checkSucess(res),fail:res=>this.checkFail(res)});
+      return
+    }
+    //设备不支持指纹识别（执行）
 
-    wx.showLoading({mask:true});
-    // if (app.globalData.userInfo) {
-    //   this.setData({
-    //     userInfo: app.globalData.userInfo,
-    //     hasUserInfo: true
-    //   })
-    // } else if (this.data.canIUse){
-    //   // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-    //   // 所以此处加入 callback 以防止这种情况
-    //   app.userInfoReadyCallback = res => {
-    //     this.setData({
-    //       userInfo: res.userInfo,
-    //       hasUserInfo: true
-    //     })
-    //   }
-    // } else {
-    //   // 在没有 open-type=getUserInfo 版本的兼容处理
-    //   wx.getUserInfo({
-    //     success: res => {
-    //       app.globalData.userInfo = res.userInfo
-    //       this.setData({
-    //         userInfo: res.userInfo,
-    //         hasUserInfo: true
-    //       })
-    //     }
-    //   })
-    // }
+  },
+  checkSucess(res){
+    let supportMode = res.supportMode;
+    if(supportMode[0] == 'fingerPrint'){
+      wx.checkIsSoterEnrolledInDevice({checkAuthMode:"fingerPrint",success:res=>{
+        //已经录入指纹
+        if(res.isEnrolled != 0){
+          wx.startSoterAuthentication({
+            requestAuthModes:['fingerPrint'],
+            challenge:'123456',
+            authContent:'请用指纹解锁',
+            success:res=>{
+              console.log(res,'99')
+            }
+          })
+          return
+        }
+        //没有录入指纹时跳转去录入指纹登陆
 
-
+      }})
+    }
+  },
+  checkFail(res){
+    //无法调用指纹登陆时
+    console.log(res,'10')
   },
   onReady: function () {
-    console.log('1')
     wx.hideLoading();
   },
-  // getUserInfo: function(e) {
-  //   console.log(e)
-  //   app.globalData.userInfo = e.detail.userInfo
-  //   this.setData({
-  //     userInfo: e.detail.userInfo,
-  //     hasUserInfo: true
-  //   })
-  // }
 })

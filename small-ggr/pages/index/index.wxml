@@ -40,6 +40,21 @@
         </view>
         <view class="content">
             <view class="content_title">
+                <text>计划安排</text>
+            </view>
+            <van-grid column-num="2" clickable>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-xiaochengxu-tianjia"></i>
+                    <text class="icon_text">添加</text>
+                </van-grid-item>
+                <van-grid-item use-slot>
+                    <i class="icon iconfont icon-Null-data"></i>
+                    <text class="icon_text">暂无相关数据</text>
+                </van-grid-item>
+            </van-grid>
+        </view>
+        <view class="content">
+            <view class="content_title">
                 <text>证件</text>
             </view>
             <van-grid column-num="2" clickable>
@@ -55,7 +70,7 @@
         </view>
         <view class="content">
             <view class="content_title">
-                <text>日志</text>
+                <text>相册</text>
             </view>
             <van-grid column-num="2" clickable>
                 <van-grid-item use-slot>
@@ -70,7 +85,7 @@
         </view>
         <view class="content">
             <view class="content_title">
-                <text>相册</text>
+                <text>日志</text>
             </view>
             <van-grid column-num="2" clickable>
                 <van-grid-item use-slot>
